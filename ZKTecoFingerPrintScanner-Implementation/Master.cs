@@ -6,10 +6,10 @@ using ZKTecoFingerPrintScanner_Implementation.Helpers;
 
 namespace ZKTecoFingerPrintScanner_Implementation
 {
-    public partial class Master : Form
+    public partial class OdooZTK : Form
     {
         FingerPrintControl fingerPrintControl = null;
-        public Master()
+        public OdooZTK()
         {
             InitializeComponent();
             pnlStage.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;

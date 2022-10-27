@@ -19,7 +19,7 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
 
         Thread captureThread = null;
 
-        public Master parentForm = null;
+        public OdooZTK parentForm = null;
 
         #region -------- FIELDS --------
 

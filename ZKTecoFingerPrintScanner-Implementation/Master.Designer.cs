@@ -1,6 +1,6 @@
 namespace ZKTecoFingerPrintScanner_Implementation
 {
-    partial class Master
+    partial class OdooZTK
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@ namespace ZKTecoFingerPrintScanner_Implementation
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Master));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OdooZTK));
             this.pnlStage = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@ namespace ZKTecoFingerPrintScanner_Implementation
             this.statusBar.TabIndex = 1;
             this.statusBar.Visible = false;
             // 
-            // Master
+            // OdooZTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,7 +95,7 @@ namespace ZKTecoFingerPrintScanner_Implementation
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(520, 590);
             this.MinimumSize = new System.Drawing.Size(520, 590);
-            this.Name = "Master";
+            this.Name = "OdooZTK";
             this.Text = "Odoo ZTK";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

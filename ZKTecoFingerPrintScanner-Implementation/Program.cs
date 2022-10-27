@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZKTecoFingerPrintScanner_Implementation;
 
-namespace ZKTecoFingerPrintScanner_Implementation
+namespace ZKTecoOdoo
 {
     static class Program
     {
@@ -16,7 +17,7 @@ namespace ZKTecoFingerPrintScanner_Implementation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Master());
+            Application.Run(new OdooZTK());
         }
     }
 }

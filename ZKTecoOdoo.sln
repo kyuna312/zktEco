@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZKTecoFingerPrintScanner-Implementation", "ZKTecoFingerPrintScanner-Implementation\ZKTecoFingerPrintScanner-Implementation.csproj", "{62C43BC8-1B23-49A8-9FFA-B702A9815204}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZKTecoOdoo", "ZKTecoFingerPrintScanner-Implementation\ZKTecoOdoo.csproj", "{62C43BC8-1B23-49A8-9FFA-B702A9815204}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
