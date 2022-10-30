@@ -1,0 +1,11 @@
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\bin\Debug\OdooZK9500.exe.config
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\bin\Debug\OdooZK9500.exe
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\bin\Debug\OdooZK9500.pdb
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.csproj.AssemblyReference.cache
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.Properties.Resources.resources
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.csproj.GenerateResource.cache
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.csproj.CoreCompileInputs.cache
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.exe
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.pdb
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.Master.resources
+C:\Users\khata\source\repos\OdooZK9500\OdooZK9500\obj\Debug\OdooZK9500.Controller.UserControl.resources
