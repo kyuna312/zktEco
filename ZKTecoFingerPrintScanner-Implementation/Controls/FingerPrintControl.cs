@@ -202,25 +202,15 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
                 btnVerify.Text = VerifyButtonToggle;
                 try
                 {
-                    Uri uri = new Uri($"http://49.0.129.18:9393/api/finger.register/1432/?patient_finger=true&send_patient_finger=true");
-                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
-                    request.Method = "POST";
-                    NetworkCredential credentials = new NetworkCredential("user", "password");
-                    request.Credentials = credentials;
+                   /// HttpWebRequest request
+                      /// = WebRequest.Create($"http://49.0.129.18:9393/api/finger.register/1432/?patient_finger=true&send_patient_finger=true") as HttpWebRequest;
 
-                    WebResponse v = request.GetResponse();
-                    Stream rStream = v.GetResponseStream();
-                    StreamReader str = new StreamReader(rStream);
-                    if (str.EndOfStream != true)
-                    {
-                        btnVerify.Text = str.ReadToEnd();
+                    var request = (HttpWebRequest)WebRequest.Create($"http://49.0.129.18:9393/api/finger.register/1432/?patient_finger=true&send_patient_finger=true");
+                    request.Method = "PUT";
+                    request.ContentType = "application/xml";
 
-                    }
-
-                    v.Close();
-                    rStream.Close();
-                    str.Close();
-                    btnVerify.Text = "success";
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    string returnString = response.StatusCode.ToString();
                     DisplayMessage(MessageManager.msg_FP_PressForVerification, true);
 
                 }
