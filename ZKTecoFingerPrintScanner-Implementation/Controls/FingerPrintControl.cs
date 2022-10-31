@@ -190,6 +190,16 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
             if (!bIdentify)
             {
                 bIdentify = true;
+                HttpWebRequest request = WebRequest.Create("http://49.0.129.18:9393/api/finger.register/1432/?patient_finger=tdfgfdsgdsf&send_patient_finger=true") as HttpWebRequest;
+                // Get response  
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    // Get the response stream  
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+
+                    // output  
+                    lblFingerPrintCount.Text = reader.ReadToEnd();
+                }
                 DisplayMessage(MessageManager.msg_FP_PressForIdentification, true);
             }
         }
@@ -200,24 +210,16 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
             {
                 bIdentify = false;
                 btnVerify.Text = VerifyButtonToggle;
-                try
+
+                HttpWebRequest request = WebRequest.Create("http://49.0.129.18:9393/api/finger.register") as HttpWebRequest;
+                // Get response  
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
-                   /// HttpWebRequest request
-                      /// = WebRequest.Create($"http://49.0.129.18:9393/api/finger.register/1432/?patient_finger=true&send_patient_finger=true") as HttpWebRequest;
+                    // Get the response stream  
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
 
-                    var request = (HttpWebRequest)WebRequest.Create($"http://49.0.129.18:9393/api/finger.register/1432/?patient_finger=true&send_patient_finger=true");
-                    request.Method = "PUT";
-                    request.ContentType = "application/xml";
-
-                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-                    string returnString = response.StatusCode.ToString();
-                    DisplayMessage(MessageManager.msg_FP_PressForVerification, true);
-
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
+                    // output  
+                    lblFingerPrintCount.Text = reader.ReadToEnd();
                 }
             }
             else
@@ -612,5 +614,6 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
 
 
         #endregion
+
     }
 }

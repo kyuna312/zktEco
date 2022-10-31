@@ -79,7 +79,7 @@
             this.lblFingerPrintCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.lblFingerPrintCount.Location = new System.Drawing.Point(332, 197);
             this.lblFingerPrintCount.Name = "lblFingerPrintCount";
-            this.lblFingerPrintCount.Size = new System.Drawing.Size(42, 46);
+            this.lblFingerPrintCount.Size = new System.Drawing.Size(83, 91);
             this.lblFingerPrintCount.TabIndex = 783;
             this.lblFingerPrintCount.Text = "3";
             // 
@@ -105,7 +105,7 @@
             this.cmbIdx.FormattingEnabled = true;
             this.cmbIdx.Location = new System.Drawing.Point(145, 127);
             this.cmbIdx.Name = "cmbIdx";
-            this.cmbIdx.Size = new System.Drawing.Size(40, 21);
+            this.cmbIdx.Size = new System.Drawing.Size(40, 34);
             this.cmbIdx.TabIndex = 11;
             // 
             // label43
@@ -115,7 +115,7 @@
             this.label43.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label43.Location = new System.Drawing.Point(11, 129);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(112, 15);
+            this.label43.Size = new System.Drawing.Size(227, 29);
             this.label43.TabIndex = 758;
             this.label43.Text = "Available Devices :";
             // 
@@ -212,7 +212,7 @@
             // 
             // FingerPrintControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblFingerPrintCount);
             this.Controls.Add(this.btnFree);

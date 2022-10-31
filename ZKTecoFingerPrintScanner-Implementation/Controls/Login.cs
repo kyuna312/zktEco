@@ -110,7 +110,6 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
             // ipText
             // 
             this.ipText.Location = new System.Drawing.Point(128, 78);
-            this.ipText.Multiline = true;
             this.ipText.Name = "ipText";
             this.ipText.Size = new System.Drawing.Size(185, 31);
             this.ipText.TabIndex = 4;
@@ -118,7 +117,6 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
             // userText
             // 
             this.userText.Location = new System.Drawing.Point(128, 123);
-            this.userText.Multiline = true;
             this.userText.Name = "userText";
             this.userText.Size = new System.Drawing.Size(185, 31);
             this.userText.TabIndex = 5;
@@ -126,7 +124,6 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
             // passText
             // 
             this.passText.Location = new System.Drawing.Point(128, 168);
-            this.passText.Multiline = true;
             this.passText.Name = "passText";
             this.passText.Size = new System.Drawing.Size(185, 31);
             this.passText.TabIndex = 6;
@@ -167,30 +164,42 @@ namespace Dofe_Re_Entry.UserControls.DeviceController
             password = passText.Text;
             try
             {
-                Uri uri = new Uri($"http://{ip}/api/auth/get_tokens?username={username}&password={password}");
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
-                request.Method = "POST";
-                NetworkCredential credentials = new NetworkCredential("user", "password");
-                request.Credentials = credentials;
+                //Uri uri = new Uri($"http://{ip}/api/auth/get_tokens?username={username}&password={password}");
+                //HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
+                //request.Method = "POST";
+                //NetworkCredential credentials = new NetworkCredential("user", "password");
+                //request.Credentials = credentials;
 
-                WebResponse v = request.GetResponse();
-                Stream rStream = v.GetResponseStream();
-                StreamReader str = new StreamReader(rStream);
-                if (str.EndOfStream != true)
+                //WebResponse v = request.GetResponse();
+                //Stream rStream = v.GetResponseStream();
+                //StreamReader str = new StreamReader(rStream);
+
+                //if (str.EndOfStream != true)
+                //{
+                //    passText.Text = str.ReadToEnd();
+                //}
+
+                //v.Close();
+                //rStream.Close();
+                //str.Close();
+
+                HttpWebRequest request = WebRequest.Create($"http://{ip}/api/auth/get_tokens?username={username}&password={password}") as HttpWebRequest;
+
+                // Get response  
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
-                    passText.Text = str.ReadToEnd();
+                    // Get the response stream  
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
 
+                    // output  
+                    passText.Text = reader.ReadToEnd();
+
+                    FingerPrintControl fingerPrintControl = new FingerPrintControl();
+                    fingerPrintControl.Show();
+                    this.Hide();
                 }
-
-                v.Close();
-                rStream.Close();
-                str.Close();
-                passText.Text = "success";
-
-                FingerPrintControl fingerPrintControl = new FingerPrintControl();
-                fingerPrintControl.Show();
-                this.Hide();
-
+                // passText.Text = "success";
+               
             }
 
             catch (Exception ex)
